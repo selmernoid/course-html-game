@@ -24,6 +24,51 @@ header {
     height: inherit;
 }
 
+.inner{
+    padding: 5% 15%;
+}
+
+.grid-table{
+    display: table;
+    margin: 0 auto;
+}
+
+.grid-table-row{
+    display: table-row;
+}
+/* same styles */
+.grid-table > * {
+    display: table-row;
+}
+
+.block{
+    width: 7vh;
+    height: 7vh;
+    background-color: #23a6d5;
+    display: table-cell;
+    margin: 10px;
+    outline: none;
+    background-clip: padding-box !important;
+    
+    border-radius: 10px;
+    border: 4px solid rgba(0, 0, 0, 0);
+
+    font-size: 2vh;
+    text-align: center;
+    vertical-align: middle;
+
+    cursor: pointer;
+    color: transparent;
+}
+
+.block.active{
+    background-color: #046183;    
+}
+
+.block.active.flipped{
+    color: #000;
+}
+
 footer {
     width: 100%;
     position: absolute;
