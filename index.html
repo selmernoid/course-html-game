@@ -10,6 +10,7 @@
 
         <link rel="favicon" href="./favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="./styles.css?v=1.0" />
+        <link rel="stylesheet" href="./all.css" />
     </head>
 
     <body>
@@ -22,85 +23,10 @@
                 <!-- template blocks -->
                 <div id="game" class="grid-table">
 
-                    <div class="flip-card">
-                        <div id="card" class="flip-card-inner">
-                    
-                          <!-- side 1 -->
-                          <div class="flip-card-front">
-                            <img src="./img/avatar-man.png" alt="avatar">
-                          </div>
-                    
-                          <!-- side 2 -->
-                          <div class="flip-card-back">
-                            <img src="./img/avatar-woman.png" alt="avatar">
-                          </div>
-                    
-                        </div>
-                    </div>
-
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
+                    <div class="card">0</div>
+                    <div class="card active">1</div>
+                    <div class="card active flipped">2</div>
+                    <div class="card active flipped"><i class="fas fa-user"></i></div>
                 </div>
             </div>
         </div>
@@ -112,17 +38,6 @@
                 <a href="mailto:my@email.com">my@email.com</a> or call <a href="tel:380671231212">+38(067)-123-12-12</a>
             </p>
         </footer>
-        <!-- <script src="./scripts.js?v=1.0"></script> -->
-
-        <script>
-            card.addEventListener('click', event => {
-                const card = event.currentTarget;
-                if (card.classList.contains('flip')) {
-                    card.classList.remove('flip');
-                } else {
-                    card.classList.add('flip');
-                }
-            })
-        </script>
+        <script src="./scripts.js?v=1.0"></script>
     </body>
 </html>

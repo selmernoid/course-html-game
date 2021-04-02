@@ -7,20 +7,16 @@ const gameElement = document.getElementById('game');
 // dynamically create rows with cells
 let itemCounter = 0;
 for (let row = 0; row < rows; row++) {
-    const newRow = document.createElement('div');
-    newRow.className = 'grid-table-row';
-    gameElement.appendChild(newRow);
-
     for (let cell = 0; cell < cells; cell++) {
         const newCell = document.createElement('div');
-        newCell.className = 'block active';
+        newCell.className = 'card active';
         newCell.innerText = itemCounter++;
-        newRow.appendChild(newCell);
+        gameElement.appendChild(newCell);
     }
 }
 
 // assign click handlers
-let blocks = document.getElementsByClassName('block');
+let blocks = document.getElementsByClassName('card');
 for (let i = 0; i < blocks.length; i++) {
     const element = blocks[i];
 

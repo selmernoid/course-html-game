@@ -1,223 +1,158 @@
 * {
-    padding: 0px;
-    margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+  padding: 0px;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 html,
 body {
-    height: 100%;
-    min-height: 100%;
-    min-width: 80vh;
+  height: 100%;
+  min-height: 100%;
+  min-width: 80vh;
 }
 
 header {
-    height: 4vh;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+  height: 4vh;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }
 
 .main {
-    background-image: url(background.jpg);
-    background-size: 100% 100%;
+  background-image: url(background.jpg);
+  background-size: 100% 100%;
 }
 
 .inner {
-    display: flex;
-    flex-direction: column;
-    padding: 5vh 0;
-}
-
-.block {
-    width: 7vh;
-    height: 7vh;
-    background-color: #23a6d5;
-    display: table-cell;
-    margin: 10px;
-    outline: none;
-    background-clip: padding-box !important;
-
-    border-radius: 10px;
-    border: 4px solid rgba(0, 0, 0, 0);
-
-    font-size: 2vh;
-    text-align: center;
-    vertical-align: middle;
-
-    cursor: default;
-    color: transparent;
-
-    -webkit-user-select: none;
-    /* Safari */
-    -moz-user-select: none;
-    /* Firefox */
-    -ms-user-select: none;
-    /* IE10+/Edge */
-    user-select: none;
-    /* Standard */
-}
-
-.block.active {
-    background-color: #046183;
-    cursor: pointer;
-}
-
-.block.active.flipped {
-    color: #000;
-
-    -webkit-animation: spin 0.2s linear normal;
-    -moz-animation: spin 0.2s linear normal;
-    animation: spin 0.2s linear normal;
+  display: flex;
+  flex-direction: column;
+  padding: 5vh 0;
 }
 
 footer {
-    margin-top: auto;
-    height: 5vh;
+  margin-top: auto;
+  height: 5vh;
 
-    text-align: center;
-    color: rgb(255, 255, 255);
-    font-size: 2vh;
-    padding: 1vh 0;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 2vh;
+  padding: 1vh 0;
 
-    background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+  background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }
 
 @keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
 
-    50% {
-        background-position: 100% 50%;
-    }
+  50% {
+    background-position: 100% 50%;
+  }
 
-    100% {
-        background-position: 0% 50%;
-    }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @-moz-keyframes spin {
-    0% {
-        -moz-transform: rotate(0deg);
-    }
+  0% {
+    -moz-transform: rotate(0deg);
+  }
 
-    25% {
-        -moz-transform: rotate(30deg);
-    }
+  25% {
+    -moz-transform: rotate(30deg);
+  }
 
-    75% {
-        -moz-transform: rotate(-30deg);
-    }
+  75% {
+    -moz-transform: rotate(-30deg);
+  }
 
-    100% {
-        -moz-transform: rotate(0deg);
-    }
+  100% {
+    -moz-transform: rotate(0deg);
+  }
 }
 
 @-webkit-keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
 
-    25% {
-        -webkit-transform: rotate(30deg);
-    }
+  25% {
+    -webkit-transform: rotate(30deg);
+  }
 
-    75% {
-        -webkit-transform: rotate(-30deg);
-    }
+  75% {
+    -webkit-transform: rotate(-30deg);
+  }
 
-    100% {
-        -webkit-transform: rotate(0deg);
-    }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
 }
 
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
 
-    25% {
-        transform: rotate(30deg);
-    }
+  25% {
+    transform: rotate(30deg);
+  }
 
-    75% {
-        transform: rotate(-30deg);
-    }
+  75% {
+    transform: rotate(-30deg);
+  }
 
-    100% {
-        transform: rotate(0deg);
-    }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 /* grid */
 
 .grid-table {
-    display: grid;
-    grid-template-columns:  9vh 9vh 9vh 9vh 9vh 9vh 9vh 9vh;
-    grid-template-rows:     9vh 9vh 9vh 9vh 9vh 9vh 9vh 9vh;
-    grid-column-gap: 1vh;
-    grid-row-gap: 1vh;
-    width: fit-content;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: 9vh 9vh 9vh 9vh 9vh 9vh 9vh 9vh;
+  grid-template-rows: 9vh 9vh 9vh 9vh 9vh 9vh 9vh 9vh;
+  grid-column-gap: 1vh;
+  grid-row-gap: 1vh;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .card {
-    background-color: #23a6d5;
-    border: 4px solid rgba(0, 0, 0, 0);
-    cursor: pointer;
-    border-radius: 10px;
+  background-color: #23a6d5;
+  /* outline: none;
+    background-clip: padding-box !important; */
+
+  border-radius: 10px;
+  border: 4px solid rgba(0, 0, 0, 0);
+
+  font-size: 7vh;
+  text-align: center;
+  vertical-align: middle;
+
+  cursor: default;
+  color: transparent;
+
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
-/* flip card */
-
-.flip-card {
-    background-color: transparent;
-    width: 100%;
-    perspective: 1000px;
+.card.active {
+  background-color: #046183;
+  cursor: pointer;
 }
 
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
+.card.active.flipped {
+  color: #000;
 
-.flip-card:hover {
-    cursor: pointer;
-}
-
-.flip-card-front,
-.flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-}
-
-.flip-card-front {
-    color: black;
-}
-
-.flip-card-front img {
-    width: 100%;
-}
-
-.flip-card-back {
-    transform: rotateY(180deg);
-}
-
-.flip-card-back img {
-    width: 100%;
-}
-
-.flip {
-    transform: rotateY(180deg);
+  -webkit-animation: spin 0.2s linear normal;
+  -moz-animation: spin 0.2s linear normal;
+  animation: spin 0.2s linear normal;
 }
