@@ -12,6 +12,7 @@ let cards = [];
 let activeCards = [];
 
 let icons = ['fa-palette', 'fa-fire'];
+let letAvailableIcons = [];
 
 function increaseScore() {
   score++;
@@ -21,12 +22,16 @@ function increaseScore() {
 function generateLevel() {
   cards = [];
   activeCards = [];
+  for (let i = 0; i < icons.length; i++) {
+    letAvailableIcons[i]= icons[i];
+  }
 
   refreshGrid();
   assignClicks();
 
   //select random buttons
-  chooseRandomCards(5);
+  // chooseRandomCards(5);
+  chooseRandomPairCards(2);
 
   // Show & hide them
   showActiveCards();
@@ -61,11 +66,31 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-function chooseRandomCards(count) {
+function chooseRandomPairCards(count) {
+  let availableItems = [];
+  let availableItemsCount = 0;
+  for (let i = 0; i < items; i++)
+    if (!activeCards[i]) availableItems[availableItemsCount++] = i;
+
   for (let i = 0; i < count; i++) {
-    let newIndex = getRandomInt(items);
-    activeCards[newIndex] = true;
+    let icon = getRandomIcon();
+    for (let j = 0; j < 2; j++) {
+      let newRandom = getRandomInt(availableItemsCount);
+      let newIndex = availableItems[newRandom];
+      activeCards[newIndex] = icon;
+      availableItems.splice(newRandom, 1);
+      availableItemsCount--;
+    }
   }
+}
+
+function getRandomIcon() {
+  if (letAvailableIcons.length == 0) 
+    return null;
+  let iconIndex = getRandomInt(letAvailableIcons.length);
+  let icon = letAvailableIcons[iconIndex];
+  letAvailableIcons.splice(iconIndex, 1);
+  return icon;
 }
 
 function clickHandler(i) {
@@ -78,8 +103,10 @@ function clickHandler(i) {
 
 function showActiveCards() {
   for (let i = 0; i < items; i++) {
-    if (activeCards[i]) {
+    let icon = activeCards[i];
+    if (icon) {
       let element = cards[i];
+      element.innerHTML = `<i class="fa ${icon}"></i>`;
       element.classList.add('flipped');
     }
   }
