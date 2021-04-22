@@ -9,6 +9,7 @@ const gameElement = document.getElementById('game');
 const scoreElement = document.getElementById('score');
 
 let cards = [];
+let activeCards = [];
 
 let icons = ['fa-palette', 'fa-fire'];
 
@@ -20,6 +21,21 @@ function increaseScore() {
 function generateLevel() {
   cards = [];
   activeCards = [];
+
+  refreshGrid();
+  assignClicks();
+
+  //select random buttons
+  chooseRandomCards(5);
+
+  // Show & hide them
+  showActiveCards();
+  setTimeout(hideActiveCards, 2 * 1000);
+}
+
+function refreshGrid() {
+  //clear game
+  gameElement.innerHTML = '';
   // dynamically create rows with cells
   let itemCounter = 0;
   for (let i = 0; i < items; i++) {
@@ -28,8 +44,9 @@ function generateLevel() {
     newCell.innerText = itemCounter++;
     gameElement.appendChild(newCell);
   }
+}
 
-  // assign click handlers
+function assignClicks() {
   let blocks = document.getElementsByClassName('card');
   for (let i = 0; i < blocks.length; i++) {
     const element = blocks[i];
@@ -38,17 +55,9 @@ function generateLevel() {
 
     element.addEventListener('click', () => clickHandler(i));
   }
-
-  //select random buttons
-  chooseRandomButtons(5);
-
-  // Show & hide them
-  showActiveCards();
-  setTimeout(hideActiveCards, 2 * 1000);
 }
 
-let activeCards = [];
-function chooseRandomButtons(count) {
+function chooseRandomCards(count) {
   for (let i = 0; i < count; i++) {
     let newIndex = getRandomInt(items);
     activeCards[newIndex] = true;
