@@ -57,6 +57,10 @@ function assignClicks() {
   }
 }
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
 function chooseRandomCards(count) {
   for (let i = 0; i < count; i++) {
     let newIndex = getRandomInt(items);
@@ -70,10 +74,6 @@ function clickHandler(i) {
   if (!activeCards[i]) return;
   element.classList.toggle('flipped');
   increaseScore();
-}
-
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
 }
 
 function showActiveCards() {
