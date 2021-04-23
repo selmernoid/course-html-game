@@ -125,7 +125,7 @@ footer {
 }
 
 .card {
-  background-color: #23a6d5;
+  background-color: #7cd2f1;
   /* outline: none;
     background-clip: padding-box !important; */
 
@@ -148,6 +148,10 @@ footer {
 .card.active {
   background-color: #2e9cc4;
   cursor: pointer;
+}
+
+.finished .card.active:not(.flipped) {
+  color: #f00;
 }
 
 .card.active.flipped {
